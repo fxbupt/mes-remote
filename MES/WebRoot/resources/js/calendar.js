@@ -1,5 +1,5 @@
 /**
- * 功能： 生成工作日历 作者： 付欣
+ * fx 20170831 create
  */
 
 $(function() {
@@ -17,7 +17,7 @@ $(function() {
       var content = '';
       // 0->周日 6->周六
       if (e.date.getDay() == 0 || e.date.getDay() == 6) {
-        content = '<div><span>班次：</span><span>休息日</span></div>';
+        content = '<div><span>班次：</span><span><i>休息日</i></span></div>';
       } else {
         content = '<div><span>班次：</span><span>双班</span></div>';
       }
@@ -36,6 +36,6 @@ $(function() {
       $(e.element).popover('hide');
     }
   });
-  // false: 不显示每周的编号
+  // false->不显示每周的编号
   $('.calendar').data('calendar').setDisplayWeekNumber(false);
 });
