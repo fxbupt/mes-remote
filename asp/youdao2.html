@@ -1,0 +1,170 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="app-mobile-web-app-capable" content="yes">
+    <title>销售人员必学干货</title>
+    <style type="text/css">
+    .desc-box {
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        border: 0;
+    }
+    
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: 0;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .items {
+        list-style: none;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .content {
+        width: 100%;
+    }
+    
+    .register_form {
+        width: 100%;
+      background-color: ffffff;
+    }
+    
+    .bottom_section {
+        width: 100%;
+        background-size: 100%;
+        text-align: center;
+    }
+    
+    .bottom_button {
+        position: absolute;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 35px;
+        left: 0;
+        right: 0;
+        width: 60%;
+        color: 422200;
+        font-size: 1.5rem;
+        background-color: f39800;
+        border-radius: 5px;
+        padding: .8rem 2rem;
+    }
+    
+    .submit {
+        left: 0;
+        right: 0;
+        width: 40%;
+        display: inline-block;
+        padding: 0.5rem;
+        text-align: center;
+        background-color: f39800;
+        color: ffffff;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
+    
+    #frm {
+        text-align: center;
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+    }
+    
+    .form_subt {
+        font-size: 1.2rem;
+    }
+    
+    .form_input {
+        font-size: 1.2rem;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="desc-box">
+        <div class="top_section">
+            <img src="https://oimagec1.ydstatic.com/image?id=8323417942193341101&product=xue" class="content">
+        </div>
+        <div class="register_form">
+            <form id="frm" name="frm" action="" method="post" onSubmit="return false;">
+                <p id="tipOrder" style="color: red;display: inline-block;font-size:1rem;height: 1.5rem;"> </p>
+                <p>
+                    <strong><span class="form_subt">姓名</span></strong>
+                    <input class="form_input" id=name  type=text placeholder=请输入您的姓名 >
+                </p>
+                <p>
+                    <strong><span class="form_subt">手机</span></strong>
+                    <input class="form_input" id=tel  type=tel placeholder=请输入您的手机号码 >
+                </p>
+                <p>
+                    <strong><span class="form_subt">邮箱</span></strong>
+                    <input class="form_input" id=email  type=email placeholder=请输入您的邮箱地址 >
+                </p>
+                <div class="submit">马上注册</div>
+            </form>
+        </div>
+        <div class="content_section">
+            <img src="" class="content">
+        </div>
+        <div class="bottom_section">
+            <img src="https://oimageb7.ydstatic.com/image?id=-8924114282315848401&product=xue" class="content">
+            <a href="#frm" class="bottom_button">马上注册，来体验！</a>
+        </div>
+    </div>
+</body>
+<script src="//shared.ydstatic.com/js/zepto/1.1.6.js"></script>
+<script type="text/javascript">
+
+(function() {
+    var form_ID = 'xs01';
+  
+    $(".submit").bind('click', function() {
+        var $tip = $("#tipOrder");
+        var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+
+        var inputList = $("input");
+        var params = "";
+        var ec = encodeURIComponent;
+        console.log(inputList.length);
+        for (i = 0; i < inputList.length; i++) {
+            if (inputList.eq(i).val() == '') {
+                $tip.text("输入不能为空!");
+                return;
+            } else if ((inputList.eq(i).attr("type") == "tel") && (/^1\d{10}$/g.test(inputList.eq(i).val()) != true)) {
+                $tip.text("手机号码输入不正确!");
+                return;
+            } else if((inputList.eq(i).attr("type") == "email")&&(reg.test(inputList.eq(i).val())!= true)){
+                $tip.text("邮箱输入不正确!");
+                return;
+            }else {
+                params = params + "&" + inputList.eq(i).attr("id") + "=" + ec(ec(inputList.eq(i).val()));
+            }
+        }
+        var url = "storeInfo.asp?from=" + form_ID + params;
+        var img = new Image();
+        img.src = url;
+        $tip.text("恭喜你，提交成功！");
+    });
+
+})();
+</script>
+
+</html>

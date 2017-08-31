@@ -1,0 +1,9 @@
+/MES/work
+**/*.log
+**/*.class
+**/*.jar
+**/*.jpeg
+**/*.JPEG
+**/*.png
+**/*.gif
+**/*.*~

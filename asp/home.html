@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script>
+    function validate_user(user,password)
+    {
+      if(""==user.value || ""==password.value)
+      {
+        alert("用户名或密码不能为空");
+        return false;
+      }
+      else return true;
+    }
+    function userid_required(user)
+    {
+      if (""==user)
+        {alert("用户名不能为空");
+         return false;}
+      else {return true;}
+    }
+    function password_required(field)
+    {
+      if(""==field)
+      {
+        alert("密码不能为空");
+        return false;
+      }
+      else {return true;}
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <form action="retrieveClientInfo.asp" align="center" method="post" onSubmit="return validate_user(this.userid, this.password)">
+      <p>用户名：<input type="text" name="userid" placeholder="用户名" onblur="userid_required(this.value)"></p>
+      <p>密  码：<input type="password" name="password" placeholder="密码"></p>
+      <p><input type="submit" value="提交"></p>
+    </form>
+  </div>  
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>bootstrap calendar demo</title>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="resources/js/bootstrap-year-calendar.js"></script>
+<link rel="stylesheet" href="resources/css/bootstrap-year-calendar.css" />
+<link rel="stylesheet"
+	href="resources/javascript/bootstrap/dist/css/bootstrap.min.css" />
+<script src="resources/javascript/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="resources/js/calendar.js"></script>
+<style type="text/css">
+.row #header, .row #toc, .row #calendar {
+	border: 1px solid blue;
+}
+
+div.row #header {
+	height: 100px;
+}
+</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div id="header" class="col-md">头部</div>
+		</div>
+		<div class="row">
+			<div id="toc" class="col-md-2">导航栏</div>
+			<!-- 此处放置工作日历 -->
+			<div id="calendar" class="col-md-10 calendar"></div>
+			<!-- 放置工作日历的事件编辑模态对话框 -->
+			
+		</div>
+	</div>
+</body>
+</html>

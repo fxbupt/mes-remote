@@ -1,0 +1,88 @@
+.zi1 {
+	font-size: 12px;
+	color: #3E3E3E;
+	line-height: 14px;
+}
+.zi2 {
+	font-size: 14px;
+	color: #3E3E3E;
+	line-height: normal;
+	font-weight: bold;
+}
+.zi3 {
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.zi4 {
+	font-size: 14px;
+	color: #0099CC;
+	font-weight: bold;
+}
+.zi5 {
+	font-size: 14px;
+	color: #999999;
+	font-weight: bold;
+}
+.zi9 {
+	font-size: 16px;
+	color: #333333;
+	font-weight: bold;
+}
+.zi10 {
+	font-size: 12px;
+	color: #999999;
+	font-weight: normal;
+}
+.zi11 {
+	font-size: 14px;
+	color: #a5adc4;
+	font-weight: bold;
+}
+.zi12 {
+	font-size: 12px;
+	color: #a5adc4;
+	font-weight: bold;
+}
+.zi13 {
+	font-size: 12px;
+	color: #FFFFFF;
+	font-weight: normal;
+}
+.zi14 {
+	font-size: 12px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+.zi15 {
+	font-size: 12px;
+	color: #0066FF;
+	font-weight: normal;
+}
+.zi6 {
+	font-family: "ËÎÌו";
+	font-size: 16px;
+	color: #999999;
+	line-height: normal;
+	font-weight: bold;
+}
+.zidh {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFF00;
+}
+.gx {
+	margin: auto;
+	padding: 0px;
+	height: 16px;
+	width: 16px;
+	border: 1px solid #00CC00;
+}
+
+.dlm {
+	margin: 0px;
+	height: 34px;
+	width: 260px;
+	padding: 0px;
+	border: 0px none #FFFFFF;
+}
