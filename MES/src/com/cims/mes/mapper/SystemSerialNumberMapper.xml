@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cims.mes.mapper.SystemSerialNumberMapper">
+  <!-- 自定义返回结果集 -->
+  <resultMap id="SystemSerialNumberResult" type="SystemSerialNumber">
+    <id property="ID" column="id"></id>
+    <result property="tableName" column="table_name"></result>
+    <result property="prefix" column="pref"></result>
+    <result property="suffix" column="suffix"></result>
+    <result property="maxNum" column="max_num"></result>
+    <result property="snLength" column="sn_length"></result>
+    <result property="description" column="description"></result>
+  </resultMap>
+
+  <!-- 通过table_name取序列号条目 -->
+  <select id="selectSerialNumberTarget" parameterType="String" resultMap="SystemSerialNumberResult">
+    select * from serial_number_info where table_name=#{tableName};
+  </select>
+  
+  <update id="updateMaxNum">
+    update serial_number_info set max_num = #{maxNum} where table_name = #{tableName};
+  </update>
+</mapper> 
