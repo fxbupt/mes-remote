@@ -1,7 +1,7 @@
 /**
  * fuxin 20170902 create
  * 功能：产生唯一序列号
- * 算法：时间戳与UUID分别使用base36编码，再进行字符串拼接; 时间戳用于排序，UUID保证唯一性。
+ * 算法：时间戳与UUID分别使用base36编码，再进行字符串拼接; 时间戳用于主键排序，UUID保证唯一性。
  */
 package com.cims.mes.utils;
 
