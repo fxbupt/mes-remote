@@ -12,12 +12,15 @@ import org.springframework.stereotype.Service;
 
 import com.cims.mes.beans.SystemSerialNumber;
 import com.cims.mes.mapper.SystemSerialNumberMapper;
+import com.cims.mes.service.ISerialNumberService;
+
 
 @Service
-public class SerialNumberServiceImpl {
+public class SerialNumberServiceImpl implements ISerialNumberService {
   @Autowired
   private SystemSerialNumberMapper systemSerialNumberMapper;
   
+  @Override
   public String generateSerialNumber(String tableName) {
     SystemSerialNumber systemSerialNumber = systemSerialNumberMapper.selectSerialNumberTarget(tableName);
     String serialNumberFormat = new String("");

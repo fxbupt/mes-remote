@@ -1,4 +1,4 @@
-package test;
+package test.com.cims.mes.utils;
 
 import com.cims.mes.utils.UnitedSerialNumber;
 
